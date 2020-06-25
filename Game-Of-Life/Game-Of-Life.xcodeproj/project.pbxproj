@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60924A26E1D001A0611 /* AppDelegate.swift */; };
+		9538E60C24A26E1D001A0611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60B24A26E1D001A0611 /* SceneDelegate.swift */; };
+		9538E61124A26E1D001A0611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9538E60F24A26E1D001A0611 /* Main.storyboard */; };
+		9538E61324A26E1E001A0611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9538E61224A26E1E001A0611 /* Assets.xcassets */; };
+		9538E61624A26E1E001A0611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9538E61424A26E1E001A0611 /* LaunchScreen.storyboard */; };
+		9538E62124A26E1F001A0611 /* Game_Of_LifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E62024A26E1F001A0611 /* Game_Of_LifeTests.swift */; };
+		9538E62C24A26E1F001A0611 /* Game_Of_LifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E62B24A26E1F001A0611 /* Game_Of_LifeUITests.swift */; };
+		9538E63D24A271A7001A0611 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E63C24A271A7001A0611 /* Cell.swift */; };
+		9538E64124A2E0B9001A0611 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E64024A2E0B9001A0611 /* GameScene.swift */; };
+		95619CEE24A507B200FA5C47 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B6733024A32D5F0087A292 /* UIView+Ext.swift */; };
+		95632BFD24A41DC700CB9886 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95632BFC24A41DC700CB9886 /* Array+Ext.swift */; };
+		95949ACA24A3B15900BAF180 /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949AC924A3B15900BAF180 /* GameBoardViewController.swift */; };
+		95949ACC24A3B17D00BAF180 /* GameBoardVC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949ACB24A3B17D00BAF180 /* GameBoardVC+Ext.swift */; };
+		95949AD024A3B2B500BAF180 /* GameBoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949ACF24A3B2B500BAF180 /* GameBoardCollectionViewCell.swift */; };
+		95949AD324A3B43F00BAF180 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95949AD224A3B43F00BAF180 /* GameController.swift */; };
+		95BB5D7C24A4571A00C2B061 /* UIView+GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB5D7B24A4571A00C2B061 /* UIView+GradientLayer.swift */; };
+		95BB5D8124A47F3C00C2B061 /* MavenProLight-100.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D7E24A47F3C00C2B061 /* MavenProLight-100.otf */; };
+		95BB5D8224A47F3C00C2B061 /* MavenProLight-200.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D7F24A47F3C00C2B061 /* MavenProLight-200.otf */; };
+		95BB5D8324A47F3C00C2B061 /* MavenProLight-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8024A47F3C00C2B061 /* MavenProLight-300.otf */; };
+		95BB5D9624A4801400C2B061 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8424A4801200C2B061 /* Montserrat-BlackItalic.ttf */; };
+		95BB5D9724A4801400C2B061 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8524A4801300C2B061 /* Montserrat-LightItalic.ttf */; };
+		95BB5D9824A4801400C2B061 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8624A4801300C2B061 /* Montserrat-Light.ttf */; };
+		95BB5D9924A4801400C2B061 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8724A4801300C2B061 /* Montserrat-MediumItalic.ttf */; };
+		95BB5D9A24A4801400C2B061 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8824A4801300C2B061 /* Montserrat-Thin.ttf */; };
+		95BB5D9B24A4801400C2B061 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8924A4801300C2B061 /* Montserrat-Medium.ttf */; };
+		95BB5D9C24A4801400C2B061 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8A24A4801300C2B061 /* Montserrat-Regular.ttf */; };
+		95BB5D9D24A4801400C2B061 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8B24A4801300C2B061 /* Montserrat-SemiBold.ttf */; };
+		95BB5D9E24A4801400C2B061 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8C24A4801300C2B061 /* Montserrat-ThinItalic.ttf */; };
+		95BB5D9F24A4801400C2B061 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8D24A4801300C2B061 /* Montserrat-BoldItalic.ttf */; };
+		95BB5DA024A4801400C2B061 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8E24A4801300C2B061 /* Montserrat-ExtraLightItalic.ttf */; };
+		95BB5DA124A4801400C2B061 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D8F24A4801300C2B061 /* Montserrat-ExtraLight.ttf */; };
+		95BB5DA224A4801400C2B061 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9024A4801300C2B061 /* Montserrat-ExtraBold.ttf */; };
+		95BB5DA324A4801400C2B061 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9124A4801300C2B061 /* Montserrat-ExtraBoldItalic.ttf */; };
+		95BB5DA424A4801400C2B061 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9224A4801300C2B061 /* Montserrat-Bold.ttf */; };
+		95BB5DA524A4801400C2B061 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9324A4801300C2B061 /* Montserrat-SemiBoldItalic.ttf */; };
+		95BB5DA624A4801400C2B061 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9424A4801300C2B061 /* Montserrat-Black.ttf */; };
+		95BB5DA724A4801400C2B061 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5D9524A4801400C2B061 /* Montserrat-Italic.ttf */; };
+		95BB5DA924A4834800C2B061 /* Voga-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DA824A4834800C2B061 /* Voga-Medium.otf */; };
+		95BB5DAF24A4838000C2B061 /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DAA24A4837F00C2B061 /* BebasNeue-Bold.ttf */; };
+		95BB5DB024A4838000C2B061 /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DAB24A4838000C2B061 /* BebasNeue-Light.ttf */; };
+		95BB5DB124A4838000C2B061 /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DAC24A4838000C2B061 /* BebasNeue-Book.ttf */; };
+		95BB5DB224A4838000C2B061 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DAD24A4838000C2B061 /* BebasNeue-Regular.ttf */; };
+		95BB5DB324A4838000C2B061 /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 95BB5DAE24A4838000C2B061 /* BebasNeue-Thin.ttf */; };
+		95BB5DB524A48AF900C2B061 /* UIView+DropShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB5DB424A48AF900C2B061 /* UIView+DropShadows.swift */; };
+		95BB5DB824A48F3800C2B061 /* EMTNeumorphicView in Frameworks */ = {isa = PBXBuildFile; productRef = 95BB5DB724A48F3800C2B061 /* EMTNeumorphicView */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9538E61D24A26E1F001A0611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9538E5FE24A26E1D001A0611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9538E60524A26E1D001A0611;
+			remoteInfo = "Game-Of-Life";
+		};
+		9538E62824A26E1F001A0611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9538E5FE24A26E1D001A0611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9538E60524A26E1D001A0611;
+			remoteInfo = "Game-Of-Life";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9538E60624A26E1D001A0611 /* Game-Of-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game-Of-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9538E60924A26E1D001A0611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9538E60B24A26E1D001A0611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9538E61024A26E1D001A0611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9538E61224A26E1E001A0611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9538E61524A26E1E001A0611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9538E61724A26E1E001A0611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9538E61C24A26E1F001A0611 /* Game-Of-LifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game-Of-LifeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9538E62024A26E1F001A0611 /* Game_Of_LifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Of_LifeTests.swift; sourceTree = "<group>"; };
+		9538E62224A26E1F001A0611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9538E62724A26E1F001A0611 /* Game-Of-LifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game-Of-LifeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9538E62B24A26E1F001A0611 /* Game_Of_LifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_Of_LifeUITests.swift; sourceTree = "<group>"; };
+		9538E62D24A26E1F001A0611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9538E63C24A271A7001A0611 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		9538E64024A2E0B9001A0611 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		95632BFC24A41DC700CB9886 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		95949AC924A3B15900BAF180 /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
+		95949ACB24A3B17D00BAF180 /* GameBoardVC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameBoardVC+Ext.swift"; sourceTree = "<group>"; };
+		95949ACF24A3B2B500BAF180 /* GameBoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		95949AD224A3B43F00BAF180 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		95B6733024A32D5F0087A292 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		95BB5D7B24A4571A00C2B061 /* UIView+GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientLayer.swift"; sourceTree = "<group>"; };
+		95BB5D7E24A47F3C00C2B061 /* MavenProLight-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-100.otf"; sourceTree = "<group>"; };
+		95BB5D7F24A47F3C00C2B061 /* MavenProLight-200.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-200.otf"; sourceTree = "<group>"; };
+		95BB5D8024A47F3C00C2B061 /* MavenProLight-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-300.otf"; sourceTree = "<group>"; };
+		95BB5D8424A4801200C2B061 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8524A4801300C2B061 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8624A4801300C2B061 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		95BB5D8724A4801300C2B061 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8824A4801300C2B061 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		95BB5D8924A4801300C2B061 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		95BB5D8A24A4801300C2B061 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		95BB5D8B24A4801300C2B061 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		95BB5D8C24A4801300C2B061 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8D24A4801300C2B061 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8E24A4801300C2B061 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D8F24A4801300C2B061 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		95BB5D9024A4801300C2B061 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		95BB5D9124A4801300C2B061 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D9224A4801300C2B061 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		95BB5D9324A4801300C2B061 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		95BB5D9424A4801300C2B061 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		95BB5D9524A4801400C2B061 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		95BB5DA824A4834800C2B061 /* Voga-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Voga-Medium.otf"; sourceTree = "<group>"; };
+		95BB5DAA24A4837F00C2B061 /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		95BB5DAB24A4838000C2B061 /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		95BB5DAC24A4838000C2B061 /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
+		95BB5DAD24A4838000C2B061 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		95BB5DAE24A4838000C2B061 /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		95BB5DB424A48AF900C2B061 /* UIView+DropShadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+DropShadows.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9538E60324A26E1D001A0611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BB5DB824A48F3800C2B061 /* EMTNeumorphicView in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E61924A26E1F001A0611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E62424A26E1F001A0611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9538E5FD24A26E1D001A0611 = {
+			isa = PBXGroup;
+			children = (
+				9538E60824A26E1D001A0611 /* Game-Of-Life */,
+				9538E61F24A26E1F001A0611 /* Game-Of-LifeTests */,
+				9538E62A24A26E1F001A0611 /* Game-Of-LifeUITests */,
+				9538E60724A26E1D001A0611 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9538E60724A26E1D001A0611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9538E60624A26E1D001A0611 /* Game-Of-Life.app */,
+				9538E61C24A26E1F001A0611 /* Game-Of-LifeTests.xctest */,
+				9538E62724A26E1F001A0611 /* Game-Of-LifeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9538E60824A26E1D001A0611 /* Game-Of-Life */ = {
+			isa = PBXGroup;
+			children = (
+				95BB5D7D24A47E2A00C2B061 /* Fonts */,
+				95632BFB24A41DB400CB9886 /* Helpers */,
+				95949AD124A3B42400BAF180 /* Model Controller */,
+				95949ACE24A3B29100BAF180 /* Views */,
+				9538E63B24A27199001A0611 /* Models */,
+				9538E60924A26E1D001A0611 /* AppDelegate.swift */,
+				9538E60B24A26E1D001A0611 /* SceneDelegate.swift */,
+				95949ACD24A3B28200BAF180 /* ViewControllers */,
+				9538E60F24A26E1D001A0611 /* Main.storyboard */,
+				9538E61224A26E1E001A0611 /* Assets.xcassets */,
+				9538E61424A26E1E001A0611 /* LaunchScreen.storyboard */,
+				9538E61724A26E1E001A0611 /* Info.plist */,
+				9538E64024A2E0B9001A0611 /* GameScene.swift */,
+				95949ACB24A3B17D00BAF180 /* GameBoardVC+Ext.swift */,
+			);
+			path = "Game-Of-Life";
+			sourceTree = "<group>";
+		};
+		9538E61F24A26E1F001A0611 /* Game-Of-LifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9538E62024A26E1F001A0611 /* Game_Of_LifeTests.swift */,
+				9538E62224A26E1F001A0611 /* Info.plist */,
+			);
+			path = "Game-Of-LifeTests";
+			sourceTree = "<group>";
+		};
+		9538E62A24A26E1F001A0611 /* Game-Of-LifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9538E62B24A26E1F001A0611 /* Game_Of_LifeUITests.swift */,
+				9538E62D24A26E1F001A0611 /* Info.plist */,
+			);
+			path = "Game-Of-LifeUITests";
+			sourceTree = "<group>";
+		};
+		9538E63B24A27199001A0611 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9538E63C24A271A7001A0611 /* Cell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95632BFB24A41DB400CB9886 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				95632BFC24A41DC700CB9886 /* Array+Ext.swift */,
+				95B6733024A32D5F0087A292 /* UIView+Ext.swift */,
+				95BB5D7B24A4571A00C2B061 /* UIView+GradientLayer.swift */,
+				95BB5DB424A48AF900C2B061 /* UIView+DropShadows.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		95949ACD24A3B28200BAF180 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				95949AC924A3B15900BAF180 /* GameBoardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		95949ACE24A3B29100BAF180 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95949ACF24A3B2B500BAF180 /* GameBoardCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95949AD124A3B42400BAF180 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95949AD224A3B43F00BAF180 /* GameController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		95BB5D7D24A47E2A00C2B061 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				95BB5DAA24A4837F00C2B061 /* BebasNeue-Bold.ttf */,
+				95BB5DAC24A4838000C2B061 /* BebasNeue-Book.ttf */,
+				95BB5DAB24A4838000C2B061 /* BebasNeue-Light.ttf */,
+				95BB5DAD24A4838000C2B061 /* BebasNeue-Regular.ttf */,
+				95BB5DAE24A4838000C2B061 /* BebasNeue-Thin.ttf */,
+				95BB5DA824A4834800C2B061 /* Voga-Medium.otf */,
+				95BB5D9424A4801300C2B061 /* Montserrat-Black.ttf */,
+				95BB5D8424A4801200C2B061 /* Montserrat-BlackItalic.ttf */,
+				95BB5D9224A4801300C2B061 /* Montserrat-Bold.ttf */,
+				95BB5D8D24A4801300C2B061 /* Montserrat-BoldItalic.ttf */,
+				95BB5D9024A4801300C2B061 /* Montserrat-ExtraBold.ttf */,
+				95BB5D9124A4801300C2B061 /* Montserrat-ExtraBoldItalic.ttf */,
+				95BB5D8F24A4801300C2B061 /* Montserrat-ExtraLight.ttf */,
+				95BB5D8E24A4801300C2B061 /* Montserrat-ExtraLightItalic.ttf */,
+				95BB5D9524A4801400C2B061 /* Montserrat-Italic.ttf */,
+				95BB5D8624A4801300C2B061 /* Montserrat-Light.ttf */,
+				95BB5D8524A4801300C2B061 /* Montserrat-LightItalic.ttf */,
+				95BB5D8924A4801300C2B061 /* Montserrat-Medium.ttf */,
+				95BB5D8724A4801300C2B061 /* Montserrat-MediumItalic.ttf */,
+				95BB5D8A24A4801300C2B061 /* Montserrat-Regular.ttf */,
+				95BB5D8B24A4801300C2B061 /* Montserrat-SemiBold.ttf */,
+				95BB5D9324A4801300C2B061 /* Montserrat-SemiBoldItalic.ttf */,
+				95BB5D8824A4801300C2B061 /* Montserrat-Thin.ttf */,
+				95BB5D8C24A4801300C2B061 /* Montserrat-ThinItalic.ttf */,
+				95BB5D7E24A47F3C00C2B061 /* MavenProLight-100.otf */,
+				95BB5D7F24A47F3C00C2B061 /* MavenProLight-200.otf */,
+				95BB5D8024A47F3C00C2B061 /* MavenProLight-300.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9538E60524A26E1D001A0611 /* Game-Of-Life */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9538E63024A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-Life" */;
+			buildPhases = (
+				9538E60224A26E1D001A0611 /* Sources */,
+				9538E60324A26E1D001A0611 /* Frameworks */,
+				9538E60424A26E1D001A0611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Game-Of-Life";
+			packageProductDependencies = (
+				95BB5DB724A48F3800C2B061 /* EMTNeumorphicView */,
+			);
+			productName = "Game-Of-Life";
+			productReference = 9538E60624A26E1D001A0611 /* Game-Of-Life.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9538E61B24A26E1F001A0611 /* Game-Of-LifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9538E63324A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-LifeTests" */;
+			buildPhases = (
+				9538E61824A26E1F001A0611 /* Sources */,
+				9538E61924A26E1F001A0611 /* Frameworks */,
+				9538E61A24A26E1F001A0611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9538E61E24A26E1F001A0611 /* PBXTargetDependency */,
+			);
+			name = "Game-Of-LifeTests";
+			productName = "Game-Of-LifeTests";
+			productReference = 9538E61C24A26E1F001A0611 /* Game-Of-LifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9538E62624A26E1F001A0611 /* Game-Of-LifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9538E63624A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-LifeUITests" */;
+			buildPhases = (
+				9538E62324A26E1F001A0611 /* Sources */,
+				9538E62424A26E1F001A0611 /* Frameworks */,
+				9538E62524A26E1F001A0611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9538E62924A26E1F001A0611 /* PBXTargetDependency */,
+			);
+			name = "Game-Of-LifeUITests";
+			productName = "Game-Of-LifeUITests";
+			productReference = 9538E62724A26E1F001A0611 /* Game-Of-LifeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9538E5FE24A26E1D001A0611 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Michael McGrath";
+				TargetAttributes = {
+					9538E60524A26E1D001A0611 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					9538E61B24A26E1F001A0611 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 9538E60524A26E1D001A0611;
+					};
+					9538E62624A26E1F001A0611 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 9538E60524A26E1D001A0611;
+					};
+				};
+			};
+			buildConfigurationList = 9538E60124A26E1D001A0611 /* Build configuration list for PBXProject "Game-Of-Life" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9538E5FD24A26E1D001A0611;
+			packageReferences = (
+				95BB5DB624A48F3800C2B061 /* XCRemoteSwiftPackageReference "EMTNeumorphicView" */,
+			);
+			productRefGroup = 9538E60724A26E1D001A0611 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9538E60524A26E1D001A0611 /* Game-Of-Life */,
+				9538E61B24A26E1F001A0611 /* Game-Of-LifeTests */,
+				9538E62624A26E1F001A0611 /* Game-Of-LifeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9538E60424A26E1D001A0611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BB5D9924A4801400C2B061 /* Montserrat-MediumItalic.ttf in Resources */,
+				95BB5D9724A4801400C2B061 /* Montserrat-LightItalic.ttf in Resources */,
+				9538E61624A26E1E001A0611 /* LaunchScreen.storyboard in Resources */,
+				95BB5DA724A4801400C2B061 /* Montserrat-Italic.ttf in Resources */,
+				95BB5DB324A4838000C2B061 /* BebasNeue-Thin.ttf in Resources */,
+				95BB5D9624A4801400C2B061 /* Montserrat-BlackItalic.ttf in Resources */,
+				95BB5D9824A4801400C2B061 /* Montserrat-Light.ttf in Resources */,
+				95BB5DB024A4838000C2B061 /* BebasNeue-Light.ttf in Resources */,
+				95BB5D8224A47F3C00C2B061 /* MavenProLight-200.otf in Resources */,
+				95BB5D9C24A4801400C2B061 /* Montserrat-Regular.ttf in Resources */,
+				9538E61324A26E1E001A0611 /* Assets.xcassets in Resources */,
+				95BB5D9F24A4801400C2B061 /* Montserrat-BoldItalic.ttf in Resources */,
+				95BB5D9A24A4801400C2B061 /* Montserrat-Thin.ttf in Resources */,
+				95BB5DA624A4801400C2B061 /* Montserrat-Black.ttf in Resources */,
+				95BB5DAF24A4838000C2B061 /* BebasNeue-Bold.ttf in Resources */,
+				95BB5D8124A47F3C00C2B061 /* MavenProLight-100.otf in Resources */,
+				95BB5D9D24A4801400C2B061 /* Montserrat-SemiBold.ttf in Resources */,
+				95BB5DA524A4801400C2B061 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				95BB5D8324A47F3C00C2B061 /* MavenProLight-300.otf in Resources */,
+				95BB5DA124A4801400C2B061 /* Montserrat-ExtraLight.ttf in Resources */,
+				95BB5D9B24A4801400C2B061 /* Montserrat-Medium.ttf in Resources */,
+				95BB5DA024A4801400C2B061 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				9538E61124A26E1D001A0611 /* Main.storyboard in Resources */,
+				95BB5DA324A4801400C2B061 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				95BB5DA224A4801400C2B061 /* Montserrat-ExtraBold.ttf in Resources */,
+				95BB5DB124A4838000C2B061 /* BebasNeue-Book.ttf in Resources */,
+				95BB5DA924A4834800C2B061 /* Voga-Medium.otf in Resources */,
+				95BB5D9E24A4801400C2B061 /* Montserrat-ThinItalic.ttf in Resources */,
+				95BB5DB224A4838000C2B061 /* BebasNeue-Regular.ttf in Resources */,
+				95BB5DA424A4801400C2B061 /* Montserrat-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E61A24A26E1F001A0611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E62524A26E1F001A0611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9538E60224A26E1D001A0611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95619CEE24A507B200FA5C47 /* UIView+Ext.swift in Sources */,
+				95632BFD24A41DC700CB9886 /* Array+Ext.swift in Sources */,
+				95949AD324A3B43F00BAF180 /* GameController.swift in Sources */,
+				95949AD024A3B2B500BAF180 /* GameBoardCollectionViewCell.swift in Sources */,
+				95BB5D7C24A4571A00C2B061 /* UIView+GradientLayer.swift in Sources */,
+				95BB5DB524A48AF900C2B061 /* UIView+DropShadows.swift in Sources */,
+				95949ACA24A3B15900BAF180 /* GameBoardViewController.swift in Sources */,
+				9538E63D24A271A7001A0611 /* Cell.swift in Sources */,
+				9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */,
+				9538E64124A2E0B9001A0611 /* GameScene.swift in Sources */,
+				9538E60C24A26E1D001A0611 /* SceneDelegate.swift in Sources */,
+				95949ACC24A3B17D00BAF180 /* GameBoardVC+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E61824A26E1F001A0611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9538E62124A26E1F001A0611 /* Game_Of_LifeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9538E62324A26E1F001A0611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9538E62C24A26E1F001A0611 /* Game_Of_LifeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9538E61E24A26E1F001A0611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9538E60524A26E1D001A0611 /* Game-Of-Life */;
+			targetProxy = 9538E61D24A26E1F001A0611 /* PBXContainerItemProxy */;
+		};
+		9538E62924A26E1F001A0611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9538E60524A26E1D001A0611 /* Game-Of-Life */;
+			targetProxy = 9538E62824A26E1F001A0611 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9538E60F24A26E1D001A0611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9538E61024A26E1D001A0611 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9538E61424A26E1E001A0611 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9538E61524A26E1E001A0611 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9538E62E24A26E1F001A0611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9538E62F24A26E1F001A0611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9538E63124A26E1F001A0611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-Life/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-Life";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9538E63224A26E1F001A0611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-Life/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-Life";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9538E63424A26E1F001A0611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-LifeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-LifeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game-Of-Life.app/Game-Of-Life";
+			};
+			name = Debug;
+		};
+		9538E63524A26E1F001A0611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-LifeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-LifeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game-Of-Life.app/Game-Of-Life";
+			};
+			name = Release;
+		};
+		9538E63724A26E1F001A0611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-LifeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-LifeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Game-Of-Life";
+			};
+			name = Debug;
+		};
+		9538E63824A26E1F001A0611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
+				INFOPLIST_FILE = "Game-Of-LifeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michael.Game-Of-LifeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Game-Of-Life";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9538E60124A26E1D001A0611 /* Build configuration list for PBXProject "Game-Of-Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9538E62E24A26E1F001A0611 /* Debug */,
+				9538E62F24A26E1F001A0611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9538E63024A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9538E63124A26E1F001A0611 /* Debug */,
+				9538E63224A26E1F001A0611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9538E63324A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-LifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9538E63424A26E1F001A0611 /* Debug */,
+				9538E63524A26E1F001A0611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9538E63624A26E1F001A0611 /* Build configuration list for PBXNativeTarget "Game-Of-LifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9538E63724A26E1F001A0611 /* Debug */,
+				9538E63824A26E1F001A0611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95BB5DB624A48F3800C2B061 /* XCRemoteSwiftPackageReference "EMTNeumorphicView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thatmarcel/EMTNeumorphicView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95BB5DB724A48F3800C2B061 /* EMTNeumorphicView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95BB5DB624A48F3800C2B061 /* XCRemoteSwiftPackageReference "EMTNeumorphicView" */;
+			productName = EMTNeumorphicView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 9538E5FE24A26E1D001A0611 /* Project object */;
+}
