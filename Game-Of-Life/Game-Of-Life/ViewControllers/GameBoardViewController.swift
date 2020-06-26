@@ -24,8 +24,16 @@ class GameBoardViewController: UIViewController {
     let restartButton = EMTNeumorphicButton()
     let settingsView = EMTNeumorphicView()
     let neuView = EMTNeumorphicView()
-    let settingsButtonView = UIView()
+    let randomNeuView = EMTNeumorphicView()
     let settingsButton = EMTNeumorphicButton()
+    let patternButtonOneView = EMTNeumorphicView()
+    let patternButtonTwoView = EMTNeumorphicView()
+    let patternButtonThreeView = EMTNeumorphicView()
+    let patternButtonOne = UIButton()
+    let patternButtonTwo = UIButton()
+    let patternButtonThree = UIButton()
+    let randomButton = UIButton()
+//    let randomButtonView = UIView()
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -33,11 +41,27 @@ class GameBoardViewController: UIViewController {
         configureCollectionView()
         constraints()
         configureSubviews()
+       
+//        configureButtons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         buttonCornerRadius()
+        configureNeuViews()
+        configureButtons()
     }
     
     @objc func playButtonTapped(_ sender: UIButton) {
@@ -62,13 +86,19 @@ class GameBoardViewController: UIViewController {
         updateViews()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func settingsButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "SettingsSegue", sender: nil)
     }
-    */
+    
+    @objc func patternOneTapped(_ sender: UIButton) {
+        gameController.pulsarPattern(collectionView: collectionView)
+    }
+    
+    @objc func patternTwoTapped(_ sender: UIButton) {
+        print("It Works!")
+    }
+    
+    @objc func patternThreeTapped(_ sender: UIButton) {
+        print("It maybe Works!")
+    }
 }

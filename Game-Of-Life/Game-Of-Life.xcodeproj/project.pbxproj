@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950D98CD24A558EB00CAD913 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98CC24A558EB00CAD913 /* SettingsViewController.swift */; };
+		950D98CF24A5684300CAD913 /* NeuButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */; };
+		950D98D124A56A6500CAD913 /* NeuView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98D024A56A6500CAD913 /* NeuView+Ext.swift */; };
 		9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60924A26E1D001A0611 /* AppDelegate.swift */; };
 		9538E60C24A26E1D001A0611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60B24A26E1D001A0611 /* SceneDelegate.swift */; };
 		9538E61124A26E1D001A0611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9538E60F24A26E1D001A0611 /* Main.storyboard */; };
@@ -72,6 +75,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		950D98CC24A558EB00CAD913 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeuButton+Ext.swift"; sourceTree = "<group>"; };
+		950D98D024A56A6500CAD913 /* NeuView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeuView+Ext.swift"; sourceTree = "<group>"; };
 		9538E60624A26E1D001A0611 /* Game-Of-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game-Of-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9538E60924A26E1D001A0611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9538E60B24A26E1D001A0611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 				95B6733024A32D5F0087A292 /* UIView+Ext.swift */,
 				95BB5D7B24A4571A00C2B061 /* UIView+GradientLayer.swift */,
 				95BB5DB424A48AF900C2B061 /* UIView+DropShadows.swift */,
+				950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */,
+				950D98D024A56A6500CAD913 /* NeuView+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				95949AC924A3B15900BAF180 /* GameBoardViewController.swift */,
+				950D98CC24A558EB00CAD913 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -459,8 +468,11 @@
 				95949ACA24A3B15900BAF180 /* GameBoardViewController.swift in Sources */,
 				9538E63D24A271A7001A0611 /* Cell.swift in Sources */,
 				9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */,
+				950D98D124A56A6500CAD913 /* NeuView+Ext.swift in Sources */,
 				9538E64124A2E0B9001A0611 /* GameScene.swift in Sources */,
+				950D98CD24A558EB00CAD913 /* SettingsViewController.swift in Sources */,
 				9538E60C24A26E1D001A0611 /* SceneDelegate.swift in Sources */,
+				950D98CF24A5684300CAD913 /* NeuButton+Ext.swift in Sources */,
 				95949ACC24A3B17D00BAF180 /* GameBoardVC+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

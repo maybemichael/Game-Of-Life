@@ -102,6 +102,18 @@ class GameController {
         collectionView.reloadData()
     }
     
+    func pulsarPattern(collectionView: UICollectionView) {
+        let pulsarCells = [[13, 10], [13, 9], [13, 8], [14, 11], [15, 11], [16, 11], [14, 13], [15, 13], [16, 13], [13, 14], [13, 15], [13, 16], [11, 14], [11, 15], [11, 16], [11, 10], [11, 9], [11, 8], [10, 11], [9, 11], [8, 11], [10, 13], [9, 13], [8, 13], [6, 10], [6, 9], [6, 8], [6, 14], [6, 15], [6, 16], [10, 18], [9, 18], [8, 18], [14, 18], [15, 18], [16, 18], [18, 14], [18, 15], [18, 16], [18, 10], [18, 9], [18, 8], [14, 6], [15, 6], [16, 6], [10, 6], [9, 6], [8, 6]]
+        for cell in cells {
+            cell.state = .dead
+        }
+        for indexPath in pulsarCells {
+            matrix?[indexPath[0]][indexPath[1]].state = .alive
+        }
+        collectionView.reloadData()
+    }
+    
+    
     init() {
         createCells()
     }
