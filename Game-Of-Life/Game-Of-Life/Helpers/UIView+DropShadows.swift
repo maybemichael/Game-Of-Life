@@ -67,6 +67,22 @@ extension UIView {
         layer.shouldRasterize = true
     }
     
+    func textTitleShadow() {
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = CGSize(width: -5, height: -5)
+        layer.masksToBounds = false
+        layer.shadowRadius = 1.5
+        layer.shouldRasterize = true
+    }
+    
+    func textShadow2() {
+        layer.shadowOpacity = 0.1
+        layer.shadowOffset = CGSize(width: -3, height: -3)
+        layer.masksToBounds = false
+        layer.shadowRadius = 1.5
+        layer.shouldRasterize = true
+    }
+    
     func contactShadow() {
         let shadowSize: CGFloat = 20
         let contactRect = CGRect(x: -shadowSize, y: bounds.height - (shadowSize * 0.4), width: bounds.width + shadowSize * 2, height: shadowSize)

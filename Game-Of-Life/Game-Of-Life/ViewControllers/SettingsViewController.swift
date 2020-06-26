@@ -28,14 +28,14 @@ class SettingsViewController: UIViewController {
     
     func updateViews() {
         self.view.addGradient(color1: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), color2: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235))
-        self.rulesLabel.textShadow()
-        self.rule1Label.textShadow()
-        self.rule2Label.textShadow()
-        self.rule3Label.textShadow()
-        self.rule4Label.textShadow()
-        self.rule1Bullet.textShadow()
-        self.rule2Bullet.textShadow()
-        self.rule3Bullet.textShadow()
-        self.rule4Bullet.textShadow()
+        self.rulesLabel.textTitleShadow()
+        self.rule1Label.textShadow2()
+        self.rule2Label.textShadow2()
+        self.rule3Label.textShadow2()
+        self.rule4Label.textShadow2()
+        self.rule1Bullet.textShadow2()
+        self.rule2Bullet.textShadow2()
+        self.rule3Bullet.textShadow2()
+        self.rule4Bullet.textShadow2()
     }
 }
