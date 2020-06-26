@@ -68,7 +68,7 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
     
     func constraints() {
         view.addSubview(buttonView)
-        buttonView.anchor(top: collectionView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: nil, centerX: view.centerXAnchor, centerY: nil, padding: .init(top: 40, left: 48, bottom: 0, right: -48), size: .init(width: 48 * 5, height: 128))
+        buttonView.anchor(top: collectionView.bottomAnchor, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: nil, centerX: view.centerXAnchor, centerY: nil, padding: .init(top: 40, left: 48, bottom: 0, right: -48), size: .init(width: 48 * 6.5, height: 128))
         buttonView.addSubview(playButton)
         buttonView.addSubview(stepButton)
         buttonView.addSubview(restartButton)
@@ -221,6 +221,7 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
         randomButton.setImage(UIImage(named: "random_icon"), for: .normal)
         randomButton.contentVerticalAlignment = .fill
         randomButton.contentHorizontalAlignment = .fill
+        randomButton.addTarget(self, action: #selector(randomPatternTapped(_:)), for: .touchUpInside)
         
         // MARK: - Settings Button
         settingsButton.configureButton(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)

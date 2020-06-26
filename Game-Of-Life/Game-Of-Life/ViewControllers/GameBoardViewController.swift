@@ -69,7 +69,7 @@ class GameBoardViewController: UIViewController {
         gameController.isPlaying.toggle()
         if gameController.isPlaying {
             collectionView.isUserInteractionEnabled = false
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: startGame)
+            timer = Timer.scheduledTimer(withTimeInterval: 0.0, repeats: true, block: startGame)
         } else {
             collectionView.isUserInteractionEnabled = true
             timer.invalidate()
@@ -90,15 +90,19 @@ class GameBoardViewController: UIViewController {
         performSegue(withIdentifier: "SettingsSegue", sender: nil)
     }
     
+    @objc func randomPatternTapped(_ sender: UIButton) {
+        gameController.randomPattern(collectionView: collectionView)
+    }
+    
     @objc func patternOneTapped(_ sender: UIButton) {
         gameController.pulsarPattern(collectionView: collectionView)
     }
     
     @objc func patternTwoTapped(_ sender: UIButton) {
-        print("It Works!")
+        gameController.pentadecathlonPattern(collectionView: collectionView)
     }
     
     @objc func patternThreeTapped(_ sender: UIButton) {
-        print("It maybe Works!")
+        gameController.heavySpaceshipPattern(collectionView: collectionView)
     }
 }
