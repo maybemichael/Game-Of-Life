@@ -111,20 +111,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preset Patterns" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1F-GI-dnD">
-                                <rect key="frame" x="20" y="110" width="374" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1F-GI-dnD">
+                                <rect key="frame" x="20" y="108" width="374" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="25"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xr-ef-Mts">
+                                <rect key="frame" x="20" y="319" width="14" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Each live cell with four or more live neighbor cells will die in the next generation." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20I-kz-TNJ">
+                                <rect key="frame" x="42" y="229.5" width="352" height="62.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwD-FK-iYu">
+                                <rect key="frame" x="20" y="236" width="14" height="49.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Each live cell with one or fewer live neighbor cells will die in the next generation." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hle-eI-n85">
+                                <rect key="frame" x="42" y="312" width="352" height="62.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Each live cell with either two or three live neighbor cells will remain alive for the next generation." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saD-7v-rVI">
+                                <rect key="frame" x="42" y="146.5" width="352" height="63"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-B4-ADm">
+                                <rect key="frame" x="20" y="401.5" width="14" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Each dead cell with exactly 3 live neighbor cells will become live in the next generation." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-tW-rbP">
+                                <rect key="frame" x="42" y="394.5" width="352" height="62.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-pp-z62">
+                                <rect key="frame" x="20" y="153.5" width="14" height="49"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OR0-pp-z62" firstAttribute="top" secondItem="k1F-GI-dnD" secondAttribute="bottom" constant="15" id="0YB-nZ-6aL"/>
+                            <constraint firstItem="saD-7v-rVI" firstAttribute="top" secondItem="k1F-GI-dnD" secondAttribute="bottom" constant="8" id="0oL-sl-16z"/>
+                            <constraint firstItem="KwD-FK-iYu" firstAttribute="leading" secondItem="l6B-u1-q7H" secondAttribute="leading" constant="20" id="0pI-VL-RMM"/>
+                            <constraint firstItem="saD-7v-rVI" firstAttribute="trailing" secondItem="l6B-u1-q7H" secondAttribute="trailing" constant="-20" id="3AV-Pm-SB6"/>
+                            <constraint firstItem="8xr-ef-Mts" firstAttribute="leading" secondItem="l6B-u1-q7H" secondAttribute="leading" constant="20" id="4aa-9V-qEH"/>
+                            <constraint firstItem="KwD-FK-iYu" firstAttribute="centerX" secondItem="8xr-ef-Mts" secondAttribute="centerX" id="75n-AW-Yrf"/>
+                            <constraint firstItem="k1F-GI-dnD" firstAttribute="leading" secondItem="l6B-u1-q7H" secondAttribute="leading" constant="20" id="7qH-Li-hLE"/>
+                            <constraint firstItem="OR0-pp-z62" firstAttribute="centerX" secondItem="KwD-FK-iYu" secondAttribute="centerX" id="Dar-uH-pLf"/>
+                            <constraint firstItem="l6B-u1-q7H" firstAttribute="trailing" secondItem="7iI-tW-rbP" secondAttribute="trailing" constant="20" id="Gix-qa-eLY"/>
+                            <constraint firstItem="saD-7v-rVI" firstAttribute="centerY" secondItem="OR0-pp-z62" secondAttribute="centerY" id="InI-gE-w7m"/>
+                            <constraint firstItem="saD-7v-rVI" firstAttribute="leading" secondItem="OR0-pp-z62" secondAttribute="trailing" constant="8" id="KIr-Ru-Axd"/>
+                            <constraint firstItem="20I-kz-TNJ" firstAttribute="leading" secondItem="KwD-FK-iYu" secondAttribute="trailing" constant="8" id="KWz-Db-6iZ"/>
+                            <constraint firstItem="G9Z-B4-ADm" firstAttribute="leading" secondItem="l6B-u1-q7H" secondAttribute="leading" constant="20" id="NJJ-p6-Cr4"/>
+                            <constraint firstItem="7iI-tW-rbP" firstAttribute="centerY" secondItem="G9Z-B4-ADm" secondAttribute="centerY" id="Q5A-cb-qjJ"/>
+                            <constraint firstItem="l6B-u1-q7H" firstAttribute="trailing" secondItem="k1F-GI-dnD" secondAttribute="trailing" constant="20" id="RVd-ex-bcg"/>
+                            <constraint firstItem="hle-eI-n85" firstAttribute="centerY" secondItem="8xr-ef-Mts" secondAttribute="centerY" id="TXJ-gW-DPT"/>
+                            <constraint firstItem="hle-eI-n85" firstAttribute="top" secondItem="20I-kz-TNJ" secondAttribute="bottom" constant="20" id="U4C-5D-H99"/>
+                            <constraint firstItem="l6B-u1-q7H" firstAttribute="trailing" secondItem="20I-kz-TNJ" secondAttribute="trailing" constant="20" id="Vsx-fz-QBH"/>
+                            <constraint firstItem="8xr-ef-Mts" firstAttribute="centerX" secondItem="G9Z-B4-ADm" secondAttribute="centerX" id="a3G-HA-QYw"/>
+                            <constraint firstItem="20I-kz-TNJ" firstAttribute="centerX" secondItem="hle-eI-n85" secondAttribute="centerX" id="dDS-Qx-Ihh"/>
+                            <constraint firstItem="hle-eI-n85" firstAttribute="leading" secondItem="8xr-ef-Mts" secondAttribute="trailing" constant="8" id="iVG-bJ-QS7"/>
+                            <constraint firstItem="20I-kz-TNJ" firstAttribute="centerY" secondItem="KwD-FK-iYu" secondAttribute="centerY" id="lyS-vO-tyN"/>
+                            <constraint firstItem="l6B-u1-q7H" firstAttribute="trailing" secondItem="hle-eI-n85" secondAttribute="trailing" constant="20" id="mXv-wy-2X6"/>
+                            <constraint firstItem="7iI-tW-rbP" firstAttribute="top" secondItem="hle-eI-n85" secondAttribute="bottom" constant="20" id="owi-PQ-uhN"/>
+                            <constraint firstItem="OR0-pp-z62" firstAttribute="leading" secondItem="l6B-u1-q7H" secondAttribute="leading" constant="20" id="phy-jj-eer"/>
+                            <constraint firstItem="7iI-tW-rbP" firstAttribute="leading" secondItem="G9Z-B4-ADm" secondAttribute="trailing" constant="8" id="pkA-dp-yUi"/>
+                            <constraint firstItem="k1F-GI-dnD" firstAttribute="top" secondItem="l6B-u1-q7H" secondAttribute="top" constant="20" id="uJp-OT-bOI"/>
+                            <constraint firstItem="KwD-FK-iYu" firstAttribute="top" secondItem="OR0-pp-z62" secondAttribute="bottom" constant="33.5" id="uWh-8O-0sn"/>
+                            <constraint firstItem="20I-kz-TNJ" firstAttribute="top" secondItem="saD-7v-rVI" secondAttribute="bottom" constant="20" id="vEi-TX-iRk"/>
+                            <constraint firstItem="hle-eI-n85" firstAttribute="centerX" secondItem="7iI-tW-rbP" secondAttribute="centerX" id="xer-GX-Zgj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="l6B-u1-q7H"/>
                     </view>
                     <navigationItem key="navigationItem" id="CNY-Ns-xOG"/>
                     <connections>
-                        <outlet property="patternsLabel" destination="k1F-GI-dnD" id="43z-8p-B2a"/>
+                        <outlet property="rule1Bullet" destination="OR0-pp-z62" id="FUi-IE-exQ"/>
+                        <outlet property="rule1Label" destination="saD-7v-rVI" id="nZI-iF-rmc"/>
+                        <outlet property="rule2Bullet" destination="KwD-FK-iYu" id="fGf-oe-DTe"/>
+                        <outlet property="rule2Label" destination="20I-kz-TNJ" id="j1Y-WO-cXK"/>
+                        <outlet property="rule3Bullet" destination="8xr-ef-Mts" id="JdN-Fm-ln9"/>
+                        <outlet property="rule3Label" destination="hle-eI-n85" id="3dJ-ba-TQ2"/>
+                        <outlet property="rule4Bullet" destination="G9Z-B4-ADm" id="f3H-eX-HQQ"/>
+                        <outlet property="rule4Label" destination="7iI-tW-rbP" id="pPf-3h-mC5"/>
+                        <outlet property="rulesLabel" destination="k1F-GI-dnD" id="mWA-hk-1Z5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CDL-zq-yUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,9 +10,32 @@ import UIKit
 
 class SettingsViewController: UIViewController {
      
+    @IBOutlet weak var rulesLabel: UILabel!
+    @IBOutlet weak var rule1Label: UILabel!
+    @IBOutlet weak var rule2Label: UILabel!
+    @IBOutlet weak var rule3Label: UILabel!
+    @IBOutlet weak var rule4Label: UILabel!
+    @IBOutlet weak var rule1Bullet: UILabel!
+    @IBOutlet weak var rule2Bullet: UILabel!
+    @IBOutlet weak var rule3Bullet: UILabel!
+    @IBOutlet weak var rule4Bullet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
+    }
+    
+    
+    func updateViews() {
         self.view.addGradient(color1: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), color2: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235))
-        // Do any additional setup after loading the view.
+        self.rulesLabel.textShadow()
+        self.rule1Label.textShadow()
+        self.rule2Label.textShadow()
+        self.rule3Label.textShadow()
+        self.rule4Label.textShadow()
+        self.rule1Bullet.textShadow()
+        self.rule2Bullet.textShadow()
+        self.rule3Bullet.textShadow()
+        self.rule4Bullet.textShadow()
     }
 }
