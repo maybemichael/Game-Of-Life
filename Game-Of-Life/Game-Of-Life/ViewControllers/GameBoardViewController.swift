@@ -23,7 +23,6 @@ class GameBoardViewController: UIViewController {
     let stepButton = EMTNeumorphicButton()
     let restartButton = EMTNeumorphicButton()
     let settingsView = EMTNeumorphicView()
-    let neuView = EMTNeumorphicView()
     let randomNeuView = EMTNeumorphicView()
     let settingsButton = EMTNeumorphicButton()
     let patternButtonOneView = EMTNeumorphicView()
@@ -33,7 +32,6 @@ class GameBoardViewController: UIViewController {
     let patternButtonTwo = UIButton()
     let patternButtonThree = UIButton()
     let randomButton = UIButton()
-//    let randomButtonView = UIView()
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -41,15 +39,11 @@ class GameBoardViewController: UIViewController {
         configureCollectionView()
         constraints()
         configureSubviews()
-       
-//        configureButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -59,9 +53,12 @@ class GameBoardViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        buttonCornerRadius()
         configureNeuViews()
         configureButtons()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
     
     @objc func playButtonTapped(_ sender: UIButton) {
@@ -69,7 +66,7 @@ class GameBoardViewController: UIViewController {
         gameController.isPlaying.toggle()
         if gameController.isPlaying {
             collectionView.isUserInteractionEnabled = false
-            timer = Timer.scheduledTimer(withTimeInterval: 0.0, repeats: true, block: startGame)
+            timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: startGame)
         } else {
             collectionView.isUserInteractionEnabled = true
             timer.invalidate()

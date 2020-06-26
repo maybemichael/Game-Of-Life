@@ -93,7 +93,7 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
         patternButtonThreeView.addSubview(patternButtonThree)
         patternButtonThree.anchor(top: nil, leading: nil, trailing: nil, bottom: nil, centerX: patternButtonThreeView.centerXAnchor, centerY: patternButtonThreeView.centerYAnchor, padding: .zero, size: .init(width: 48, height: 48))
         view.addSubview(settingsView)
-        settingsView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, trailing: nil, bottom: nil, centerX: nil, centerY: nil, padding: .init(top: 8, left: 20, bottom: 0, right: 0), size: .init(width: 52, height: 52))
+        settingsView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, trailing: nil, bottom: nil, centerX: nil, centerY: nil, padding: .init(top: 8, left: 20, bottom: 0, right: 0), size: .init(width: 50, height: 50))
 
         settingsView.addSubview(settingsButton)
         settingsButton.anchor(top: nil, leading: nil, trailing: nil, bottom: nil, centerX: settingsView.centerXAnchor, centerY: settingsView.centerYAnchor, padding: .zero, size: .init(width: 48, height: 48))
@@ -106,79 +106,30 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
         restartButton.imageEdgeInsets = UIEdgeInsets(top: -4.8, left: -4.8, bottom: -4.8, right: -4.8)
         randomButton.imageEdgeInsets = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 7)
         patternButtonOne.imageEdgeInsets = UIEdgeInsets(top: 7, left: 7, bottom: 7, right: 12)
-//        settingsButton.imageEdgeInsets = UIEdgeInsets(top: -4.8, left: -4.8, bottom: -4.8, right: -4.8)
-        
-//        settingsButtonView.layer.masksToBounds = true
-        
-        
-        
-        
-        
-        buttonView.layer.cornerRadius = 20
-//        patternButtonView.layer.cornerRadius = 20
-        settingsView.layer.cornerRadius = settingsView.bounds.width / 2
-//        randomButtonView.layer.masksToBounds = true
-        
-        
-        
-        
-//        settingsButton.neumorphicLayer?.elementDepth = 7
-//        settingsView.neumorphicLayer?.elementDepth = 7
-//        buttonView.neumorphicLayer?.elementDepth = 7
-        patternButtonOneView.neumorphicLayer?.elementDepth = 7
-        neuView.neumorphicLayer?.elementDepth = 7
-        randomNeuView.neumorphicLayer?.elementDepth = 7
-        neuView.neumorphicLayer?.elementColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-        randomNeuView.neumorphicLayer?.elementColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-//        settingsButton.neumorphicLayer?.elementColor = UIColor.clear.cgColor
-//        buttonView.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235)
-//        patternButtonView.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235)
-//        settingsView.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.6968801618, green: 0.9205616117, blue: 0.8583740592, alpha: 1)
-//        playButton.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-//        stepButton.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-//        restartButton.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-        randomNeuView.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235)
-        neuView.neumorphicLayer?.elementBackgroundColor = #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235)
-//        settingsButton.neumorphicLayer?.elementBackgroundColor = UIColor.clear.cgColor
-        
-//        playButton.neumorphicLayer?.darkShadowOpacity = 0.7
-//        stepButton.neumorphicLayer?.darkShadowOpacity = 0.7
-//        restartButton.neumorphicLayer?.darkShadowOpacity = 0.7
-//        settingsButton.neumorphicLayer?.darkShadowOpacity = 0.7
-        randomNeuView.neumorphicLayer?.darkShadowOpacity = 0.7
-        neuView.neumorphicLayer?.darkShadowOpacity = 0.7
-//        playButton.neumorphicLayer?.lightShadowOpacity = 0.4
-//        stepButton.neumorphicLayer?.lightShadowOpacity = 0.4
-//        restartButton.neumorphicLayer?.lightShadowOpacity = 0.4
-//        settingsButton.neumorphicLayer?.lightShadowOpacity = 0.4
-        neuView.neumorphicLayer?.lightShadowOpacity = 0.4
-        randomNeuView.neumorphicLayer?.lightShadowOpacity = 0.4
-        
-        
-        
-        
-    }
-    
-    func buttonCornerRadius() {
-        
-//        settingsButtonView.layer.cornerRadius = settingsButtonView.bounds.width / 2
-        neuView.layer.cornerRadius = neuView.bounds.width / 2
-        randomNeuView.layer.cornerRadius = randomNeuView.bounds.width / 2
-//        settingsButtonView.addGradient2(color1: #colorLiteral(red: 0, green: 0.7310971022, blue: 0.9994077086, alpha: 1), color2: #colorLiteral(red: 0.0009124627686, green: 0.5192523003, blue: 0.9988625646, alpha: 1))
     }
     
     func configureNeuViews() {
+        // MARK: - Button View
         buttonView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)
+        buttonView.layer.cornerRadius = 20
         
-        settingsView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.4970824718, green: 0.8695255518, blue: 1, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.7, darkOpacity: 0.2)
+        // MARK: - Info Button View
+        settingsView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.7, darkOpacity: 0.2)
         settingsView.layer.cornerRadius = settingsView.bounds.width / 2
-    
+        
+        // MARK: - Random Button View
+        randomNeuView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)
+        randomNeuView.layer.cornerRadius = randomNeuView.bounds.width / 2
+        
+        // MARK: - Pattern One Button View
         patternButtonOneView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)
         patternButtonOneView.layer.cornerRadius = patternButtonOneView.bounds.width / 2
         
+        // MARK: - Pattern Two Button View
         patternButtonTwoView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)
         patternButtonTwoView.layer.cornerRadius = patternButtonTwoView.bounds.width / 2
         
+        // MARK: - Pattern Three Button View
         patternButtonThreeView.configureView(depth: 7, lightShadowColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), backgroundColor: #colorLiteral(red: 0.7894616723, green: 0.9426258206, blue: 0.6598886847, alpha: 0.8470588235), lightOpacity: 0.4, darkOpacity: 0.7)
         patternButtonThreeView.layer.cornerRadius = patternButtonThreeView.bounds.width / 2
     }
@@ -232,7 +183,6 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
         // MARK: - Pattern Button One
         patternButtonOne.layer.masksToBounds = true
         patternButtonOne.layer.cornerRadius = patternButtonOne.bounds.width / 2
-//        patternButtonOne.setImage(UIImage(named: "number_one"), for: .normal)
         let style = NSMutableParagraphStyle()
         style.alignment = .center
         let buttonTitle = NSAttributedString(string: "1", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Montserrat-SemiBold", size: 40)!, NSAttributedString.Key.paragraphStyle: style])

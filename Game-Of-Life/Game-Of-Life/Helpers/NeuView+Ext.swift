@@ -34,5 +34,4 @@ extension EMTNeumorphicView {
             neumorphicLayer?.darkShadowOpacity = darkOpacity
         }
     }
-    
 }
