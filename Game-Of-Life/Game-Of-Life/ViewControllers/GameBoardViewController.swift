@@ -66,7 +66,7 @@ class GameBoardViewController: UIViewController {
         gameController.isPlaying.toggle()
         if gameController.isPlaying {
             collectionView.isUserInteractionEnabled = false
-            timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: startGame)
+            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: startGame)
         } else {
             collectionView.isUserInteractionEnabled = true
             timer.invalidate()

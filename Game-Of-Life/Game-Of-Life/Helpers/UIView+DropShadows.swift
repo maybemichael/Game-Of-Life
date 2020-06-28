@@ -68,8 +68,8 @@ extension UIView {
     }
     
     func textTitleShadow() {
-        layer.shadowOpacity = 0.2
-        layer.shadowOffset = CGSize(width: -5, height: -5)
+        layer.shadowOpacity = 0.3
+        layer.shadowOffset = CGSize(width: -3, height: -3)
         layer.masksToBounds = false
         layer.shadowRadius = 1.5
         layer.shouldRasterize = true

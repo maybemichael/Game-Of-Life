@@ -46,7 +46,9 @@ extension GameBoardViewController: UICollectionViewDelegate, UICollectionViewDel
     }
     
     func startGame(timer: Timer) {
-        gameController.nextGenCells(collectionView: collectionView)
+        gameController.getNextGeneration(collectionView: collectionView)
+//        gameController.updateBoard(collectionView: collectionView)
+//        gameController.nextGenCells(collectionView: collectionView)
         updateViews()
     }
     

@@ -12,12 +12,15 @@ class GameController {
     
     var cells: [Cell] = []
     var matrix: [[Cell]]?
+    var nextGenMatrix: [[Cell]] = []
     let columns = 25
     let rows = 25
-    var liveCells: [Cell] = []
+    var liveCells: Set<Cell> = []
     var cellsToUpdate: [Cell] = []
     var isPlaying = false
     var generation = 0
+    var generationsArray: [Set<Cell>] = []
+    var generationsArray2: [Dictionary<Cell, Int>] = []
     
     func createCells() {
         for x in 0..<columns {
@@ -27,6 +30,211 @@ class GameController {
             }
         }
         self.matrix = cells.chunked(into: 25)
+        self.nextGenMatrix = cells.chunked(into: 25)
+    }
+    
+    func getLiveCells() {
+        if liveCells.count == 0 {
+            for cell in cells {
+                if cell.state == .alive {
+                    liveCells.insert(cell)
+                }
+            }
+        }
+    }
+    
+    func getNeighbors2(cell: Cell, max: Int) -> [Cell] {
+        guard let matrix = self.matrix else { fatalError() }
+        var liveCellNeighbors = [Cell]()
+        
+        if cell.x - 1 > 0 && cell.y - 1 > 0 {
+            liveCellNeighbors.append(matrix[cell.x - 1][cell.y - 1])
+        } else {
+            liveCellNeighbors.append(matrix[max - 1][max - 1])
+        }
+        
+        if cell.y - 1 > 0 {
+            liveCellNeighbors.append(matrix[cell.x][cell.y - 1])
+        } else {
+            liveCellNeighbors.append(matrix[cell.x][max - 1])
+        }
+        
+        if cell.x + 1 < max && cell.y - 1 > 0 {
+            liveCellNeighbors.append(matrix[cell.x + 1][cell.y - 1])
+        } else {
+            liveCellNeighbors.append(matrix[0][max - 1])
+        }
+        
+        if cell.x - 1 > 0 {
+            liveCellNeighbors.append(matrix[cell.x - 1][cell.y])
+        } else {
+            liveCellNeighbors.append(matrix[max - 1][cell.y])
+        }
+        
+        if cell.x + 1 < max {
+            liveCellNeighbors.append(matrix[cell.x + 1][cell.y])
+        } else {
+            liveCellNeighbors.append(matrix[0][cell.y])
+        }
+        
+        if cell.x - 1 > 0 && cell.y + 1 < max {
+            liveCellNeighbors.append(matrix[cell.x - 1][cell.y + 1])
+        } else {
+            liveCellNeighbors.append(matrix[max - 1][0])
+        }
+        
+        if cell.y + 1 < max {
+            liveCellNeighbors.append(matrix[cell.x][cell.y + 1])
+        } else {
+            liveCellNeighbors.append(matrix[cell.x][0])
+        }
+        
+        if cell.x + 1 < max && cell.y + 1 < max {
+            liveCellNeighbors.append(matrix[cell.x + 1][cell.y + 1])
+        } else {
+            liveCellNeighbors.append(matrix[0][0])
+        }
+        
+//        var neighbors = [
+//            matrix[cell.x - 1][cell.y - 1],
+//            matrix[cell.x]    [cell.y - 1],
+//            matrix[cell.x + 1][cell.y - 1],
+//            matrix[cell.x - 1][cell.y],
+//            matrix[cell.x + 1][cell.y],
+//            matrix[cell.x - 1][cell.y + 1],
+//            matrix[cell.x]    [cell.y + 1],
+//            matrix[cell.x + 1][cell.y + 1]
+//        ]
+ 
+        return liveCellNeighbors
+    }
+    
+    func getNeighbors(cell: Cell, max: Int) -> [Cell] {
+        guard let matrix = self.matrix else { fatalError() }
+        var neighbors = [Cell]()
+        if cell.x - 1 >= 0 && cell.y - 1 >= 0 {
+            neighbors.append(matrix[cell.x - 1][cell.y - 1])
+        }
+        if cell.y - 1 >= 0 {
+            neighbors.append(matrix[cell.x][cell.y - 1])
+        }
+        if cell.x + 1 < max && cell.y - 1 >= 0 {
+            neighbors.append(matrix[cell.x + 1][cell.y - 1])
+        }
+        if cell.x - 1 >= 0 {
+            neighbors.append(matrix[cell.x - 1][cell.y])
+        }
+        if cell.x + 1 < max {
+            neighbors.append(matrix[cell.x + 1][cell.y])
+        }
+        if cell.x - 1 >= 0 && cell.y + 1 < max {
+            neighbors.append(matrix[cell.x - 1][cell.y + 1])
+        }
+        if cell.y + 1 < max {
+            neighbors.append(matrix[cell.x][cell.y + 1])
+        }
+        if cell.x + 1 < max && cell.y + 1 < max {
+            neighbors.append(matrix[cell.x + 1][cell.y + 1])
+        }
+        
+        return neighbors
+    }
+    
+    func getNextGeneration2(collectionView: UICollectionView) {
+        DispatchQueue.global().async {
+            let start = CFAbsoluteTimeGetCurrent()
+            self.getLiveCells()
+            var countedSet: [Cell: Int] = [:]
+            self.generation += 1
+            for cell in self.liveCells {
+                if countedSet[cell] == nil {
+                    countedSet[cell] = 0
+                }
+                let neighbors = self.getNeighbors(cell: cell, max: 25)
+                for neighbor in neighbors {
+                    if let value = countedSet[neighbor] {
+                        countedSet[neighbor]! = value + 1
+                    } else {
+                        countedSet[neighbor] = 1
+                    }
+                }
+            }
+            self.generationsArray2.append(countedSet)
+            let difference = CFAbsoluteTimeGetCurrent() - start
+            print("It took \(difference) seconds for one generation.")
+        }
+    }
+    
+    func getNextGeneration(collectionView: UICollectionView) {
+        DispatchQueue.global().async {
+            let start = CFAbsoluteTimeGetCurrent()
+            self.getLiveCells()
+            
+            var countedSet: [Cell: Int] = [:]
+            self.generation += 1
+            for cell in self.liveCells {
+                if countedSet[cell] == nil {
+                    countedSet[cell] = 0
+                }
+                let neighbors = self.getNeighbors(cell: cell, max: 25)
+                for neighbor in neighbors {
+                    if let value = countedSet[neighbor] {
+                        countedSet[neighbor]! = value + 1
+                    } else {
+                        countedSet[neighbor] = 1
+                    }
+                }
+            }
+            for cell in countedSet.keys {
+                if countedSet[cell]! < 2 || countedSet[cell]! > 3 {
+                    self.liveCells.remove(cell)
+                    self.matrix?[cell.x][cell.y].state = .dead
+                }
+                
+                if countedSet[cell] == 3 {
+                    self.liveCells.insert(cell)
+                    self.matrix?[cell.x][cell.y].state = .alive
+                }
+            }
+            let difference = CFAbsoluteTimeGetCurrent() - start
+            print("It took \(difference) seconds for one generation.")
+        }
+        DispatchQueue.main.async {
+            let start2 = CFAbsoluteTimeGetCurrent()
+            collectionView.reloadData()
+            let diff = CFAbsoluteTimeGetCurrent() - start2
+            print("It took \(diff) seconds for one generation to update collection view.")
+        }
+    }
+    
+    func updateBoard(collectionView: UICollectionView) {
+        let start = CFAbsoluteTimeGetCurrent()
+        DispatchQueue.global().async {
+            var index = 0
+            while self.isPlaying != false {
+                let countedSet = self.generationsArray2[index]
+                for cell in countedSet.keys {
+                    if countedSet[cell]! < 2 || countedSet[cell]! > 3 {
+                        self.liveCells.remove(cell)
+                        self.matrix?[cell.x][cell.y].state = .dead
+                    }
+                    
+                    if countedSet[cell] == 3 {
+                        self.liveCells.insert(cell)
+                        self.matrix?[cell.x][cell.y].state = .alive
+                    }
+                    index += 1
+                    let difference = CFAbsoluteTimeGetCurrent() - start
+                    print("It took \(difference) seconds for one generation.")
+                }
+                DispatchQueue.main.async {
+                    let start2 = CFAbsoluteTimeGetCurrent()
+                    collectionView.reloadData()
+                    let diff = CFAbsoluteTimeGetCurrent() - start2
+                    print("It took \(diff) seconds for one generation to update collection view.")
+                }
+            }
+        }
     }
     
     func checkSurroundingCells() {
@@ -75,6 +283,7 @@ class GameController {
     }
     
     func nextGenCells(collectionView: UICollectionView) {
+        let start = CFAbsoluteTimeGetCurrent()
         checkSurroundingCells()
         generation += 1
         for cell in cells {
@@ -92,6 +301,8 @@ class GameController {
         let updatedMatrix = cells.chunked(into: 25)
         self.matrix = updatedMatrix
         collectionView.reloadData()
+        let difference = CFAbsoluteTimeGetCurrent() - start
+        print("It took \(difference) seconds for one generation.")
     }
     
     func clearBoard(collectionView: UICollectionView) {

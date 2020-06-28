@@ -13,7 +13,16 @@ enum CellState {
     case dead
 }
 
-class Cell {
+class Cell: Hashable {
+    static func == (lhs: Cell, rhs: Cell) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(x)
+        hasher.combine(y)
+    }
+    
     let x: Int
     let y: Int
     var state: CellState = .dead
