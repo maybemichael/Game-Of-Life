@@ -14,15 +14,6 @@ enum CellState {
 }
 
 class Cell: Hashable {
-    static func == (lhs: Cell, rhs: Cell) -> Bool {
-        return lhs.x == rhs.x && lhs.y == rhs.y
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(x)
-        hasher.combine(y)
-    }
-    
     let x: Int
     let y: Int
     var state: CellState = .dead
@@ -44,5 +35,14 @@ class Cell: Hashable {
         default:
             return false
         }
+    }
+    
+    static func == (lhs: Cell, rhs: Cell) -> Bool {
+        return lhs.x == rhs.x && lhs.y == rhs.y
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(x)
+        hasher.combine(y)
     }
 }

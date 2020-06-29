@@ -12,6 +12,7 @@ class GameController {
     
     var cells: [Cell] = []
     var matrix: [[Cell]]?
+    var matrix2: [[[Cell]]] = []
     var nextGenMatrix: [[Cell]] = []
     let columns = 25
     let rows = 25
@@ -30,7 +31,7 @@ class GameController {
             }
         }
         self.matrix = cells.chunked(into: 25)
-        self.nextGenMatrix = cells.chunked(into: 25)
+//        self.nextGenMatrix = cells.chunked(into: 25)
     }
     
     func getLiveCells() {
@@ -43,99 +44,23 @@ class GameController {
         }
     }
     
-    func getNeighbors2(cell: Cell, max: Int) -> [Cell] {
-        guard let matrix = self.matrix else { fatalError() }
-        var liveCellNeighbors = [Cell]()
-        
-        if cell.x - 1 > 0 && cell.y - 1 > 0 {
-            liveCellNeighbors.append(matrix[cell.x - 1][cell.y - 1])
-        } else {
-            liveCellNeighbors.append(matrix[max - 1][max - 1])
-        }
-        
-        if cell.y - 1 > 0 {
-            liveCellNeighbors.append(matrix[cell.x][cell.y - 1])
-        } else {
-            liveCellNeighbors.append(matrix[cell.x][max - 1])
-        }
-        
-        if cell.x + 1 < max && cell.y - 1 > 0 {
-            liveCellNeighbors.append(matrix[cell.x + 1][cell.y - 1])
-        } else {
-            liveCellNeighbors.append(matrix[0][max - 1])
-        }
-        
-        if cell.x - 1 > 0 {
-            liveCellNeighbors.append(matrix[cell.x - 1][cell.y])
-        } else {
-            liveCellNeighbors.append(matrix[max - 1][cell.y])
-        }
-        
-        if cell.x + 1 < max {
-            liveCellNeighbors.append(matrix[cell.x + 1][cell.y])
-        } else {
-            liveCellNeighbors.append(matrix[0][cell.y])
-        }
-        
-        if cell.x - 1 > 0 && cell.y + 1 < max {
-            liveCellNeighbors.append(matrix[cell.x - 1][cell.y + 1])
-        } else {
-            liveCellNeighbors.append(matrix[max - 1][0])
-        }
-        
-        if cell.y + 1 < max {
-            liveCellNeighbors.append(matrix[cell.x][cell.y + 1])
-        } else {
-            liveCellNeighbors.append(matrix[cell.x][0])
-        }
-        
-        if cell.x + 1 < max && cell.y + 1 < max {
-            liveCellNeighbors.append(matrix[cell.x + 1][cell.y + 1])
-        } else {
-            liveCellNeighbors.append(matrix[0][0])
-        }
-        
-//        var neighbors = [
-//            matrix[cell.x - 1][cell.y - 1],
-//            matrix[cell.x]    [cell.y - 1],
-//            matrix[cell.x + 1][cell.y - 1],
-//            matrix[cell.x - 1][cell.y],
-//            matrix[cell.x + 1][cell.y],
-//            matrix[cell.x - 1][cell.y + 1],
-//            matrix[cell.x]    [cell.y + 1],
-//            matrix[cell.x + 1][cell.y + 1]
-//        ]
- 
-        return liveCellNeighbors
-    }
-    
     func getNeighbors(cell: Cell, max: Int) -> [Cell] {
         guard let matrix = self.matrix else { fatalError() }
-        var neighbors = [Cell]()
-        if cell.x - 1 >= 0 && cell.y - 1 >= 0 {
-            neighbors.append(matrix[cell.x - 1][cell.y - 1])
-        }
-        if cell.y - 1 >= 0 {
-            neighbors.append(matrix[cell.x][cell.y - 1])
-        }
-        if cell.x + 1 < max && cell.y - 1 >= 0 {
-            neighbors.append(matrix[cell.x + 1][cell.y - 1])
-        }
-        if cell.x - 1 >= 0 {
-            neighbors.append(matrix[cell.x - 1][cell.y])
-        }
-        if cell.x + 1 < max {
-            neighbors.append(matrix[cell.x + 1][cell.y])
-        }
-        if cell.x - 1 >= 0 && cell.y + 1 < max {
-            neighbors.append(matrix[cell.x - 1][cell.y + 1])
-        }
-        if cell.y + 1 < max {
-            neighbors.append(matrix[cell.x][cell.y + 1])
-        }
-        if cell.x + 1 < max && cell.y + 1 < max {
-            neighbors.append(matrix[cell.x + 1][cell.y + 1])
-        }
+        
+        let xMinus = (cell.x - 1).withinBoard(count: max)
+        let xPlus = (cell.x + 1).withinBoard(count: max)
+        let yMinus = (cell.y - 1).withinBoard(count: max)
+        let yPlus = (cell.y + 1).withinBoard(count: max)
+        let neighbors = [
+            matrix[xMinus][yMinus],
+            matrix[cell.x][yMinus],
+            matrix[xPlus][yMinus],
+            matrix[xMinus][cell.y],
+            matrix[xPlus][cell.y],
+            matrix[xMinus][yPlus],
+            matrix[cell.x][yPlus],
+            matrix[xPlus][yPlus]
+        ]
         
         return neighbors
     }
@@ -189,10 +114,12 @@ class GameController {
                 if countedSet[cell]! < 2 || countedSet[cell]! > 3 {
                     self.liveCells.remove(cell)
                     self.matrix?[cell.x][cell.y].state = .dead
+                    self.matrix?[cell.x][cell.y].state = .dead
                 }
                 
                 if countedSet[cell] == 3 {
                     self.liveCells.insert(cell)
+                    self.matrix?[cell.x][cell.y].state = .alive
                     self.matrix?[cell.x][cell.y].state = .alive
                 }
             }
@@ -306,6 +233,7 @@ class GameController {
     }
     
     func clearBoard(collectionView: UICollectionView) {
+        liveCells.removeAll()
         for cell in cells {
             cell.state = .dead
         }
@@ -327,6 +255,7 @@ class GameController {
     }
     
     func pulsarPattern(collectionView: UICollectionView) {
+        liveCells.removeAll()
         let pulsarCells = [[13, 10], [13, 9], [13, 8], [14, 11], [15, 11], [16, 11], [14, 13], [15, 13], [16, 13], [13, 14], [13, 15], [13, 16], [11, 14], [11, 15], [11, 16], [11, 10], [11, 9], [11, 8], [10, 11], [9, 11], [8, 11], [10, 13], [9, 13], [8, 13], [6, 10], [6, 9], [6, 8], [6, 14], [6, 15], [6, 16], [10, 18], [9, 18], [8, 18], [14, 18], [15, 18], [16, 18], [18, 14], [18, 15], [18, 16], [18, 10], [18, 9], [18, 8], [14, 6], [15, 6], [16, 6], [10, 6], [9, 6], [8, 6]]
         for cell in cells {
             cell.state = .dead
@@ -338,6 +267,7 @@ class GameController {
     }
     
     func pentadecathlonPattern(collectionView: UICollectionView) {
+        liveCells.removeAll()
         let pentaCells = [[12, 12], [12, 13], [12, 11], [12, 10], [12, 14], [12, 15], [12, 9], [12, 8], [12, 16], [12, 7]]
         for cell in cells {
             cell.state = .dead
@@ -349,6 +279,7 @@ class GameController {
     }
     
     func heavySpaceshipPattern(collectionView: UICollectionView) {
+        liveCells.removeAll()
         let spaceshipCells = [[13, 0], [12, 1], [12, 2], [12, 3], [12, 4], [12, 5], [12, 6], [13, 6], [14, 6], [15, 5]]
         for cell in cells {
             cell.state = .dead

@@ -10,6 +10,7 @@
 		950D98CD24A558EB00CAD913 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98CC24A558EB00CAD913 /* SettingsViewController.swift */; };
 		950D98CF24A5684300CAD913 /* NeuButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */; };
 		950D98D124A56A6500CAD913 /* NeuView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D98D024A56A6500CAD913 /* NeuView+Ext.swift */; };
+		953346D724A9B5CF00D918EF /* Integer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953346D624A9B5CF00D918EF /* Integer+Ext.swift */; };
 		9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60924A26E1D001A0611 /* AppDelegate.swift */; };
 		9538E60C24A26E1D001A0611 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538E60B24A26E1D001A0611 /* SceneDelegate.swift */; };
 		9538E61124A26E1D001A0611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9538E60F24A26E1D001A0611 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		950D98CC24A558EB00CAD913 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeuButton+Ext.swift"; sourceTree = "<group>"; };
 		950D98D024A56A6500CAD913 /* NeuView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NeuView+Ext.swift"; sourceTree = "<group>"; };
+		953346D624A9B5CF00D918EF /* Integer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Ext.swift"; sourceTree = "<group>"; };
 		9538E60624A26E1D001A0611 /* Game-Of-Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game-Of-Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9538E60924A26E1D001A0611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9538E60B24A26E1D001A0611 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				95BB5DB424A48AF900C2B061 /* UIView+DropShadows.swift */,
 				950D98CE24A5684300CAD913 /* NeuButton+Ext.swift */,
 				950D98D024A56A6500CAD913 /* NeuView+Ext.swift */,
+				953346D624A9B5CF00D918EF /* Integer+Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				95949AD024A3B2B500BAF180 /* GameBoardCollectionViewCell.swift in Sources */,
 				95BB5D7C24A4571A00C2B061 /* UIView+GradientLayer.swift in Sources */,
 				95BB5DB524A48AF900C2B061 /* UIView+DropShadows.swift in Sources */,
+				953346D724A9B5CF00D918EF /* Integer+Ext.swift in Sources */,
 				95949ACA24A3B15900BAF180 /* GameBoardViewController.swift in Sources */,
 				9538E63D24A271A7001A0611 /* Cell.swift in Sources */,
 				9538E60A24A26E1D001A0611 /* AppDelegate.swift in Sources */,
